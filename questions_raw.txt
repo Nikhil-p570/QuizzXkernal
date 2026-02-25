@@ -1,0 +1,782 @@
+Part A: Easy (50 Questions)
+1. [C] Who is known as the father of the C Programming Language?
+A) Bjarne Stroustrup | B) James Gosling | C) Dennis Ritchie | D) Guido van Rossum
+Answer: C
+2. [Python] Identify the error in the while loop logic: while count < 3: if count == 1: continue; count = count + 1
+A) continue skips the increment, causing an Infinite Loop.
+B) continue cannot be used inside an if statement.
+C) Missing parentheses around condition.
+D) No Error.
+Answer: A
+3. [HTML/CSS] What does HTML stand for?
+A) Hyper Text Preprocessor | B) Hyper Text Markup Language | C) Hyper Tool Multi Language | D) High Text Markup Language
+Answer: B
+4. [Java] Identify the error in the main method signature: public void main(String[] args)
+A) Missing static keyword | B) args must be String args | C) System should be lowercase | D) No Error
+Answer: A
+5. [DBMS] What does DBMS stand for?
+A) Database Management System | B) Database Manipulation System | C) Data Binding Management System | D) Document Base Management System
+Answer: A
+6. [C] Which symbol is used to represent "Input/Output" in a flowchart?
+A) Oval | B) Rectangle | C) Parallelogram | D) Diamond
+Answer: C
+7. [Python] Check the function parameter usage: def calculate_area(length, width): return length * width called as calculate_area(10)
+A) TypeError: missing 1 required positional argument: 'width'.
+B) Function definition missing colon.
+C) Function call must use keyword arguments.
+D) No Error.
+Answer: A
+8. [HTML/CSS] What does CSS stand for?
+A) Cascading Style Sheets | B) Colorful Style Sheets | C) Computer Style Sheets | D) Creative Style Sheets
+Answer: A
+9. [Java] Check the variable declaration: int 1num = 10;
+A) Variable name cannot start with a digit | B) int cannot hold 10 | C) Print statement error | D) No Error
+Answer: A
+10. [DBMS] Who is known as the father of the relational database model?
+A) Bill Gates | B) Edgar F. Codd (E.F. Codd) | C) Dennis Ritchie | D) Larry Ellison
+Answer: B
+11. [C] Which of the following is a valid variable name in C?
+A) 1st_number | B) int | C) _value | D) $money
+Answer: C
+12. [Python] Identify the scope error: score = 85; if score >= 90: grade = "A" ... print(Grade)
+A) NameError: 'Grade' is not defined (Case sensitivity).
+B) Syntax invalid.
+C) Concatenation error.
+D) No Error.
+Answer: A
+13. [HTML/CSS] Which HTML tag is used for the largest heading?
+A) <heading> | B) <h6> | C) <h1> | D) <head>
+Answer: C
+14. [Java] Identify the floating-point literal error: float f = 3.14;
+A) Cannot assign double literal 3.14 to float without f suffix
+B) Float cannot hold decimals
+C) System.out.println cannot print float
+D) No Error
+Answer: A
+15. [DBMS] What does SQL stand for?
+A) Sequential Query Language | B) Standard Query Language | C) Structured Query Language | D) System Query Language
+Answer: C
+16. [C] What is the standard size of a char data type in C?
+A) 1 byte | B) 2 bytes | C) 4 bytes | D) 8 bytes
+Answer: A
+17. [Python] Check the list iteration logic: for n in numbers
+A) SyntaxError: invalid syntax (Missing colon :).
+B) += operator is not valid.
+C) Modulo operator incorrect.
+D) No Error.
+Answer: A
+18. [HTML/CSS] Which HTML tag is used to insert a line break?
+A) <break> | B) <br> | C) <lb> | D) <newline>
+Answer: B
+19. [Java] What is the issue with this boolean assignment? boolean b = 1;
+A) In Java, boolean can only be true or false, not 1
+B) Syntax error in if
+C) b is a reserved keyword
+D) No Error
+Answer: A
+20. [DBMS] Which SQL command is used to extract data from a database?
+A) GET | B) EXTRACT | C) SELECT | D) PULL
+Answer: C
+21. [C] Which format specifier is used to print an integer value?
+A) %f | B) %c | C) %d | D) %s
+Answer: C
+22. [Python] Identify the error in the user input handling: age = input("Age: "); if age >= 18:
+A) TypeError: '>=' not supported between instances of 'str' and 'int'
+B) input is not defined in Python 3.
+C) Indentation error.
+D) No Error.
+Answer: A
+23. [HTML/CSS] What is the correct HTML tag for inserting an image?
+A) <image> | B) <img> | C) <pic> | D) <src>
+Answer: B
+24. [Java] Check the array index: int[] arr = {10, 20, 30}; System.out.println(arr[3]);
+A) Array Index Out Of Bounds Exception
+B) Array initialization syntax error
+C) Syntax error
+D) No Error
+Answer: A
+25. [DBMS] Which of the following is a DDL (Data Definition Language) command?
+A) INSERT | B) UPDATE | C) CREATE | D) DELETE
+Answer: C
+26. [C] Which operator is used to find the remainder of a division?
+A) / | B) % | C) # | D) @
+Answer: B
+27. [Python] Check the dictionary access: student = {"name": "Alice"}; print(student["Name"])
+A) KeyError: 'Name' (Dictionary keys are case-sensitive).
+B) Dictionary syntax error.
+C) List inside dictionary is not allowed.
+D) No Error.
+Answer: A
+28. [HTML/CSS] Which attribute specifies the path to the image in an <img> tag?
+A) href | B) link | C) src | D) path
+Answer: C
+29. [Java] Identify the error in String declaration: String s = 'A';
+A) Cannot assign char literal (single quotes) to String
+B) Strings must be capitalized
+C) s is undefined
+D) No Error
+Answer: A
+30. [DBMS] Which of the following is a DML (Data Manipulation Language) command?
+A) ALTER | B) DROP | C) GRANT | D) UPDATE
+Answer: D
+31. [C] Which keyword is used to declare a constant variable?
+A) static | B) volatile | C) const | D) define
+Answer: C
+32. [Python] Identify the string operation error: text = "Python"; text[0] = "J"
+A) TypeError: 'str' object does not support item assignment (Strings are immutable).
+B) String must use single quotes.
+C) Index out of range.
+D) No Error.
+Answer: A
+33. [HTML/CSS] Which attribute is used to provide alternate text for an image if it fails to load?
+A) title | B) alt | C) desc | D) info
+Answer: B
+34. [Java] Check the switch statement: double d = 10.5; switch(d) { }
+A) Switch does not support double type
+B) Case label error
+C) Double initialization error
+D) No Error
+Answer: A
+35. [DBMS] What is the primary characteristic of a Primary Key?
+A) It can contain NULL values.
+B) It must be a NUMBER data type.
+C) It uniquely identifies each record and cannot contain NULL values.
+D) It is used to link two tables together.
+Answer: C
+36. [C] What is the missing syntax? int main() { printf("Hello") return 0; }
+A) Missing semicolon after printf
+B) Wrong header file
+C) Invalid format specifier
+D) No Error
+Answer: A
+37. [Python] Check the nested loop syntax: for i in range(3): for j in range(2): print(i, j) (print is not double indented)
+A) IndentationError: expected an indented block.
+B) Range logic error.
+C) Print statement missing parentheses.
+D) No Error.
+Answer: A
+38. [HTML/CSS] Which HTML tag is used to create a hyperlink?
+A) <link> | B) <a> | C) <href> | D) <nav>
+Answer: B
+39. [Java] Identify the access modifier error: private int x = 10; accessed from another class.
+A) x has private access and cannot be accessed here
+B) Cannot create object
+C) Private variables not allowed
+D) No Error
+Answer: A
+40. [DBMS] In Oracle SQL, what is the DUAL table?
+A) A table used to store backup data.
+B) A dummy table with exactly one row and one column, used for evaluating expressions.
+C) A table that holds temporary views.
+D) A table with two columns.
+Answer: B
+41. [C] Identify the error: int 1number = 100;
+A) Variable name cannot start with a digit | B) Integer value is too large | C) Printf cannot print variables with numbers | D) No Error
+Answer: A
+42. [Python] Identify the file handling error: file = open("data.txt", "w"); file.close(); file.write("text")
+A) ValueError: I/O operation on closed file.
+B) File mode "w" invalid.
+C) Write requires bytes.
+D) No Error.
+Answer: A
+43. [HTML/CSS] Which attribute is used in the <a> tag to specify the destination URL?
+A) src | B) link | C) url | D) href
+Answer: D
+44. [Java] Check the final variable usage: final int MAX = 100; MAX = 200;
+A) Cannot assign a value to final variable MAX
+B) Final variables must be static
+C) MAX must be lowercase
+D) No Error
+Answer: A
+45. [DBMS] Which clause is used to filter records in a SELECT statement?
+A) FILTER | B) HAVING | C) ORDER BY | D) WHERE
+Answer: D
+46. [C] What is the issue with scanf("%d", age);?
+A) Variable age is not initialized
+B) Missing & (address-of operator) before age
+C) %d is incorrect for integer
+D) No Error
+Answer: B
+47. [Python] Check the logic in the function return: for n in nums: if n % 2 == 0: return n
+A) Returns immediately after finding the first even number instead of accumulating them.
+B) List initialization error.
+C) Return statement missing brackets.
+D) No Error.
+Answer: A
+48. [HTML/CSS] Which HTML tag is used to create an unordered (bulleted) list?
+A) <ol> | B) <ul> | C) <li> | D) <list>
+Answer: B
+49. [Java] Identify the abstract class instantiation: abstract class Shape {} Shape s = new Shape();
+A) Shape is abstract; cannot be instantiated
+B) Abstract class cannot have abstract methods
+C) Missing body
+D) No Error
+Answer: A
+50. [DBMS] Which clause is used to sort the result-set of a query?
+A) SORT BY | B) ORDER BY | C) GROUP BY | D) ALIGN BY
+Answer: B
+
+Part B: Medium (50 Questions)
+51. [C] What is the output/error of this pointer code: int *ptr; *ptr = 10;
+A) Segmentation Fault (Dereferencing uninitialized pointer) | B) Pointer must be initialized to NULL | C) Printf format error | D) No Error
+Answer: A
+52. [Python] Identify the logical error in list modification: for n in numbers: numbers.remove(n)
+A) Modifying a list while iterating over it causes unexpected behavior (skips elements).
+B) remove is not a list method.
+C) numbers is not iterable.
+D) No Error.
+Answer: A
+53. [HTML/CSS] What is the difference between display: none; and visibility: hidden;?
+A) There is no difference.
+B) display: none; hides the element and removes it from the document flow, while visibility: hidden; hides it but keeps its space.
+C) visibility: hidden; removes the element from the document flow.
+D) display: none; only works on text.
+Answer: B
+54. [Java] Identify the logical error in the Singleton pattern: public Singleton() {}
+A) Constructor should be private to prevent external instantiation
+B) Instance variable must be final
+C) Method must be synchronized
+D) No Error
+Answer: A
+55. [DBMS] In database normalization, what is the primary rule for First Normal Form (1NF)?
+A) It must have a foreign key.
+B) All columns must depend on the primary key.
+C) Every column must contain atomic (indivisible) values.
+D) It must not have transitive dependencies.
+Answer: C
+56. [C] Identify the string handling error: char str[5]; strcpy(str, "Hello");
+A) Buffer Overflow (Array size 5 cannot hold 6 chars: H-e-l-l-o-\0)
+B) Array size must be constant
+C) String must be in single quotes
+D) No Error
+Answer: A
+57. [Python] Check the mutable default argument trap: def add_item(item, box=[]): box.append(item)
+A) The default list box is created only once and shared across all calls.
+B) Default arguments cannot be lists.
+C) Prints ['Banana'] correctly.
+D) No Error.
+Answer: A
+58. [HTML/CSS] If an element has width: 100px; padding: 10px; border: 5px solid black;, what is its total rendered width if box-sizing: content-box;?
+A) 100px | B) 110px | C) 120px | D) 130px
+Answer: D
+59. [Java] Check the String equality: String s1 = "Hello"; String s2 = new String("Hello"); if (s1 == s2)
+A) Compares references, not content. Evaluates to false.
+B) Syntax error
+C) Evaluates to true
+D) No Error
+Answer: A
+60. [DBMS] Which ACID property ensures that a transaction is treated as a single, indivisible unit of work?
+A) Atomicity | B) Consistency | C) Isolation | D) Durability
+Answer: A
+61. [C] Check the loop logic: for(; i < 5; i++); printf("%d", i);
+A) Missing initialization in for loop
+B) Semicolon ; at end of for loop makes the body empty. Prints 5 once.
+C) printf is outside loop scope
+D) No Error
+Answer: B
+62. [Python] Identify the scope error: def outer(): def inner(): nonlocal x; x += 5 (where x is global)
+A) SyntaxError: no binding for nonlocal 'x' found (Should be global x).
+B) x is immutable.
+C) Indentation error.
+D) No Error.
+Answer: A
+63. [HTML/CSS] In CSS specificity, which of the following carries the highest weight?
+A) An ID selector (#header)
+B) A Class selector (.container)
+C) An Inline style (style="...")
+D) A pseudo-class (:hover)
+Answer: C
+64. [Java] Identify the method overloading ambiguity: void show(int a, long b) {} void show(long a, int b) {} called via show(10, 10)
+A) Ambiguous method call
+B) Method signature error
+C) No method found
+D) No Error
+Answer: A
+65. [DBMS] What is the result of the expression NULL = NULL in Oracle SQL?
+A) TRUE | B) FALSE | C) UNKNOWN (or NULL) | D) Throws a syntax error
+Answer: C
+66. [C] Identify the macro error: #define SQUARE(x) x * x called as SQUARE(1 + 2)
+A) Missing parentheses around x (Evaluates to 1+2*1+2 = 5)
+B) Macro expansion failure
+C) Syntax error
+D) No Error
+Answer: A
+67. [Python] Check the dictionary iteration logic: for name, score in scores: print(name, score)
+A) ValueError: too many values to unpack (Iterating a dictionary yields only keys).
+B) Dictionary is not iterable.
+C) Print error.
+D) No Error.
+Answer: A
+68. [HTML/CSS] What does the CSS selector div > p target?
+A) All <p> elements inside a <div>
+B) Only <p> elements that are direct children of a <div>
+C) Any element inside a <p>
+D) All <div> and <p> elements
+Answer: B
+69. [Java] Check the exception hierarchy: catch (Exception e) {} catch (IOException e) {}
+A) Unreachable code (Subclass IOException is already caught by Exception)
+B) Checked exception not handled
+C) Try block empty
+D) No Error
+Answer: A
+70. [DBMS] What is the logical order of execution for an SQL SELECT statement?
+A) SELECT -> FROM -> WHERE -> GROUP BY
+B) FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
+C) FROM -> GROUP BY -> WHERE -> HAVING
+D) WHERE -> FROM -> SELECT
+Answer: B
+71. [C] What is wrong with this function return? int* getPtr() { int x = 10; return &x; }
+A) Returning address of local stack variable (Dangling Pointer)
+B) Function returns int instead of pointer
+C) Cannot assign address to pointer
+D) No Error
+Answer: A
+72. [Python] Identify the error in the class constructor: class Person: def __init__(self, name): called as p = Person()
+A) TypeError: init() missing 1 required positional argument: 'name'.
+B) Constructor name must be Person.
+C) self is not defined.
+D) No Error.
+Answer: A
+73. [HTML/CSS] What does the CSS selector h1 + p target?
+A) All <p> elements that come after an <h1>
+B) The first <p> element inside an <h1>
+C) The <p> element that is placed immediately after an <h1> (adjacent sibling)
+D) Both <h1> and <p> elements
+Answer: C
+74. [Java] Identify the static block behavior: static int x = 10; static { x = 20; }
+A) Static block cannot access static variable
+B) Prints 20 (Static block runs at class loading before main)
+C) Prints 10
+D) No Error
+Answer: B
+75. [DBMS] What is the difference between UNION and UNION ALL?
+A) UNION ALL sorts the result set.
+B) UNION keeps all duplicates.
+C) UNION removes duplicates, while UNION ALL retains all duplicates.
+D) There is no difference.
+Answer: C
+76. [C] Identify the switch error: float f = 2.5; switch(f) { case 2.5: break; }
+A) Switch expression must be integral type (not float)
+B) Case label must be integer
+C) Float initialization error
+D) Both A and B
+Answer: D
+77. [Python] Check the file handling with with statement: with open("data.txt", "w") as f: f.write(100)
+A) TypeError: write() argument must be str, not int.
+B) SyntaxError (Missing colon).
+C) Indentation error.
+D) No Error.
+Answer: A
+78. [HTML/CSS] Which attribute is used to link a <label> to a specific <input> element?
+A) name | B) id | C) for | D) link
+Answer: C
+79. [Java] Check the interface variable: interface A { int x = 10; } modified by x = 20;
+A) Cannot assign a value to final variable x (Interface variables are implicitly final)
+B) Interface variable must be private
+C) Access modifier error
+D) No Error
+Answer: A
+80. [DBMS] How many NULL values can be inserted into a column with a UNIQUE constraint in Oracle?
+A) Zero.
+B) Exactly one.
+C) Multiple NULL values are allowed.
+D) Depends on table size.
+Answer: C
+81. [C] Check the array index logic: int arr[5] = {1, 2, 3}; printf("%d", 2[arr]);
+A) Syntax error 2[arr]
+B) Should be arr[2]
+C) Partial initialization error
+D) No Error (Prints 3)
+Answer: D
+82. [Python] Identify the logic error in tuple unpacking: coordinates = (10, 20, 30); x, y = coordinates
+A) ValueError: too many values to unpack (expected 2, got 3).
+B) Tuple syntax error.
+C) x and y are not defined.
+D) No Error.
+Answer: A
+83. [HTML/CSS] What is the difference between the em and rem units in CSS?
+A) em is relative to viewport width, rem to viewport height.
+B) em is relative to parent's font size, rem to root (<html>) element's font size.
+C) rem is relative to parent, em to root.
+D) They are identical.
+Answer: B
+84. [Java] Identify the thread start issue: t.start(); t.start();
+A) IllegalThreadStateException (Cannot restart a thread once started)
+B) start method not found
+C) Creates a new thread automatically
+D) No Error
+Answer: A
+85. [DBMS] Which Oracle function compares two expressions and returns NULL if they are equal?
+A) NVL() | B) COALESCE() | C) NULLIF() | D) NVL2()
+Answer: C
+86. [C] Identify the comparison error: char s1[] = "Hi"; if(s1 == "Hi")
+A) Comparing pointer addresses instead of string content (Use strcmp)
+B) Array initialization error
+C) Assignment in if condition
+D) No Error
+Answer: A
+87. [Python] Check the set operation: my_set = {1, 2, 3}; print(my_set[0])
+A) TypeError: 'set' object is not subscriptable.
+B) Set definition invalid.
+C) Index out of range.
+D) No Error.
+Answer: A
+88. [HTML/CSS] For the z-index property to work, what else must be true about the element?
+A) It must be a block-level element.
+B) It must have a specified height and width.
+C) Its position property must be set to something other than static.
+D) It must have a background color.
+Answer: C
+89. [Java] Check the ArrayList generics: ArrayList<int> list = new ArrayList<>();
+A) Generic type argument cannot be primitive int (Must use Integer)
+B) Syntax error <>
+C) Autoboxing error
+D) No Error
+Answer: A
+90. [DBMS] What is the difference between NVL and COALESCE in Oracle?
+A) NVL takes two arguments, COALESCE takes multiple.
+B) NVL evaluates all arguments, COALESCE short-circuits.
+C) Both A and B are correct.
+D) COALESCE is Oracle-specific.
+Answer: C
+91. [C] What is wrong with this file operation? FILE *fp = fopen("t.txt", "r"); fputc('A', fp);
+A) File pointer fp might be NULL
+B) Writing to a file opened in "read" mode ("r")
+C) Cannot close file
+D) No Error
+Answer: B
+92. [Python] Identify the error in exception handling inheritance: except Exception: before except ZeroDivisionError:
+A) Unreachable code (ZeroDivisionError is already caught by Exception).
+B) Error is not raised here.
+C) SyntaxError.
+D) No Error.
+Answer: A
+93. [HTML/CSS] What is the default flex-direction of a CSS Flexbox container?
+A) column | B) row | C) row-reverse | D) column-reverse
+Answer: B
+94. [Java] Identify the logic error in wait(): t.wait(); outside a synchronized block.
+A) IllegalMonitorStateException (Current thread does not own the monitor)
+B) wait is not a method of Object
+C) Exception not thrown
+D) No Error
+Answer: A
+95. [DBMS] If Table A has 10 rows and Table B has 5 rows, how many rows are returned by a CROSS JOIN?
+A) 5 | B) 10 | C) 15 | D) 50
+Answer: D
+96. [C] Identify the increment logic error: i = i++;
+A) Undefined behavior (Modifying twice in one sequence point)
+B) Syntax error
+C) Printf format error
+D) No Error
+Answer: A
+97. [Python] Check the variable shadowing: count = 10; def increment(): count += 1
+A) UnboundLocalError: local variable 'count' referenced before assignment.
+B) Global count is immutable.
+C) Syntax error.
+D) No Error.
+Answer: A
+98. [HTML/CSS] How do you perfectly center a single child element inside a Flexbox container?
+A) justify-content: center; align-items: center;
+B) text-align: center; vertical-align: middle;
+C) margin: 0 auto; padding: auto;
+D) align-content: center; justify-items: center;
+Answer: A
+99. [Java] Check the abstract class constructor chaining: new Derived();
+A) Abstract class cannot have a constructor
+B) Prints "Base" then "Derived" (Constructor chaining)
+C) Error, Base is abstract
+D) No Error
+Answer: B
+100. [DBMS] What is a "Correlated Subquery"?
+A) Returns multiple columns.
+B) Executes once for the entire query.
+C) References a column from the outer query and executes for every row processed.
+D) Used strictly in the FROM clause.
+Answer: C
+
+Part C: Hard (50 Questions)
+101. [C] Identify the hidden side-effect error: int size = sizeof(i++);
+A) Syntax error in sizeof
+B) sizeof is evaluated at compile-time; i++ is never executed
+C) Printf format error
+D) No Error
+Answer: B
+102. [Python] Identify the Late Binding (Closure) Error: lambdas = [lambda: i for i in range(3)]
+A) They all print 2 (Lambda captures the variable reference, not the value).
+B) List append syntax error.
+C) Nested function definition error.
+D) No Error.
+Answer: A
+103. [HTML/CSS] Which of the following CSS selectors has the highest specificity?
+A) .nav-item.active
+B) #main-header
+C) header ul li a
+D) div#main-header .nav-item
+Answer: D
+104. [Java] Identify the subtle finally block behavior: try { return 1; } finally { return 2; }
+A) The finally block overrides the try block's return value. Method returns 2.
+B) Unreachable code
+C) Method returns 1
+D) No Error
+Answer: A
+105. [DBMS] What is the difference between RANK() and DENSE_RANK()?
+A) RANK() leaves gaps in ranking on ties, DENSE_RANK() does not.
+B) DENSE_RANK() leaves gaps, RANK() does not.
+C) RANK() is used for text, DENSE_RANK() for numbers.
+D) There is no difference.
+Answer: A
+106. [C] Check the memory deallocation logic: p++; free(p);
+A) Pointer increment illegal
+B) Invalid pointer freed (Pointer does not point to the start of the block)
+C) malloc cast error
+D) No Error
+Answer: B
+107. [Python] Check the Tkinter Thread Blocking Issue: time.sleep(5) inside a button callback.
+A) Blocks the main GUI event loop, causing interface to freeze.
+B) Label config syntax error.
+C) Command binding error.
+D) No Error.
+Answer: A
+108. [HTML/CSS] What does the CSS property display: contents; do?
+A) Makes element visible only to screen readers.
+B) Causes children to appear as direct children of the parent, ignoring the element's box.
+C) Displays raw HTML code.
+D) Forces inline to block.
+Answer: B
+109. [Java] Check the String Interning: String s1 = new String("Hi").intern(); String s2 = "Hi"; if(s1 == s2)
+A) Prints "True" (Both refer to the same String Pool object)
+B) Prints "False"
+C) intern() returns void
+D) No Error
+Answer: A
+110. [DBMS] What does the Oracle MERGE statement do?
+A) Combines two tables into one.
+B) Performs an "UPSERT" (updates if condition matches, inserts if not).
+C) Resolves deadlocks.
+D) Merges duplicate rows.
+Answer: B
+111. [C] Identify the string literal issue: char *str = "Hello"; str[0] = 'h';
+A) Pointer syntax error
+B) Undefined Behavior / Segmentation Fault (Writing to read-only memory)
+C) Char constant error
+D) No Error
+Answer: B
+112. [Python] Identify the Mutable Class Variable Trap: class Inventory: items = []
+A) Since items is a class variable, modifying it in one instance affects all.
+B) Prints [] safely.
+C) List definition error.
+D) No Error.
+Answer: A
+113. [HTML/CSS] How does position: sticky; behave on an element?
+A) Locks element to bottom permanently.
+B) Behaves like relative until scrolled past offset, then behaves like fixed.
+C) Glues sibling elements.
+D) Prevents JS movement.
+Answer: B
+114. [Java] Identify the Generics Type Erasure issue: List raw = list; raw.add("Hello"); into an Integer list.
+A) ClassCastException (Runtime error when retrieving)
+B) Compile Error
+C) Raw type error
+D) No Error
+Answer: A
+115. [DBMS] Which data dictionary view allows a user to see all the tables they own?
+A) ALL_TABLES | B) DBA_TABLES | C) USER_TABLES | D) MY_TABLES
+Answer: C
+116. [C] What is the issue with this signed integer loop? for (char c = 0; c < 128; c++)
+A) Infinite Loop (If char is signed 8-bit, 127 + 1 wraps to -128)
+B) Syntax error
+C) Printf format error
+D) No Error
+Answer: A
+117. [Python] Check the Generator Consumption: gen = numbers(); sum(gen); sum(gen)
+A) Second call prints 0 (Generators are exhausted after one use).
+B) Second call prints the same sum.
+C) Yield syntax error.
+D) No Error.
+Answer: A
+118. [HTML/CSS] What does calc(100vh - 50px) do?
+A) Syntax error mixing units.
+B) Calculates value equal to 100% of viewport height minus 50 pixels.
+C) Width of screen minus 50px.
+D) Scales element down on hover.
+Answer: B
+119. [Java] Check the ThreadLocal memory leak: tl.set(new byte[1MB]); tl = null;
+A) The value in ThreadLocalMap is NOT garbage collected until the thread dies
+B) Value is immediately collected
+C) ThreadLocal requires generics
+D) No Error
+Answer: A
+120. [DBMS] What is an Inline View?
+A) Created with CREATE VIEW.
+B) Subquery in the WHERE clause.
+C) Subquery placed in the FROM clause acting as a temporary table.
+D) A materialized view.
+Answer: C
+121. [C] Check the macro operator precedence: #define VAL 10+5 inside VAL * 2
+A) Macro syntax error
+B) Logic Error (Evaluates to 10 + 5 * 2 = 20, not 30)
+C) Variable too small
+D) No Error
+Answer: B
+122. [Python] Identify the Infinite Recursion in Property Setter: self.radius = value inside @radius.setter
+A) Triggers the setter again recursively causing RecursionError.
+B) Decorator syntax error.
+C) Raise syntax error.
+D) No Error.
+Answer: A
+123. [HTML/CSS] What happens if you apply pointer-events: none; to a <button>?
+A) The button disappears.
+B) Cursor turns to "not-allowed".
+C) Button becomes unclickable, events pass straight through it.
+D) Only clickable via keyboard.
+Answer: C
+124. [Java] Identify the initialization deadlock: class A { static final B b = new B(); }
+A) StackOverflowError / ClassCircularityError (Static initializer loop)
+B) Compile Error
+C) Deadlock
+D) No Error
+Answer: A
+125. [DBMS] Which operator is used to concatenate strings in Oracle SQL?
+A) + (Plus sign) | B) || (Double vertical bar) | C) CONCAT() only | D) &
+Answer: B
+126. [C] Identify the header/function mismatch: sqrt(4.0) without <math.h>
+A) sqrt undefined (Implicit declaration warning in C90, Error in C99+)
+B) Printf format error
+C) Integer argument required
+D) No Error
+Answer: A
+127. [Python] Check the Dictionary Mutation Error: for key in grades: del grades[key]
+A) RuntimeError: dictionary changed size during iteration.
+B) Dictionary not iterable.
+C) Del syntax error.
+D) No Error.
+Answer: A
+128. [HTML/CSS] What is the difference between async and defer attributes on a <script> tag?
+A) async blocks HTML parsing; defer does not.
+B) async executes immediately upon download; defer waits until document is parsed.
+C) defer is for external scripts; async is for office.
+D) There is no difference.
+Answer: B
+129. [Java] Check the volatile atomicity: volatile int count = 0; count++;
+A) Not atomic. volatile guarantees visibility, not atomicity. Data race exists.
+B) Volatile ensures thread safety
+C) Syntax error
+D) No Error
+Answer: A
+130. [DBMS] If SYSDATE is '10-OCT-2025', what is the result of SYSDATE + 1 in Oracle?
+A) '10-OCT-2026' | B) '11-OCT-2025' | C) Throws datatype error | D) Adds 1 hour
+Answer: B
+131. [C] Check the structure padding: struct Data { char c; int i; };
+A) Syntax error
+B) Size is likely 8 due to alignment
+C) Size is 5
+D) No Error
+Answer: B
+132. [Python] Identify the __slots__ Attribute Error: p.z = 3 when z is not in slots.
+A) AttributeError: 'Point' object has no attribute 'z'.
+B) Slots syntax error.
+C) Valid dynamic assignment.
+D) No Error.
+Answer: A
+133. [HTML/CSS] Which native HTML tag is used to create an interactive modal or popup box?
+A) <modal> | B) <popup> | C) <dialog> | D) <overlay>
+Answer: C
+134. [Java] Identify the clone() depth: public Object clone() { return super.clone(); } on object with Array.
+A) Shallow Copy (Cloned object shares the same array reference as original)
+B) Deep Copy
+C) Access modifier error
+D) No Error
+Answer: A
+135. [DBMS] What is a "Phantom Read"?
+A) Reading uncommitted data.
+B) Transaction re-reading data and finding it modified.
+C) Transaction executing same query twice and finding new rows added by another transaction.
+D) Reading corrupted data.
+Answer: C
+136. [C] Identify the file handling bug: while (!feof(fp))
+A) fgetc returns int, not char
+B) feof only returns true after a failed read (Reads last char twice)
+C) File mode invalid
+D) Both A and B
+Answer: D
+137. [Python] Identify the Multiple Inheritance MRO (Diamond Problem) Error: class D(A, B):
+A) TypeError: Cannot create a consistent method resolution order (If A is base of B).
+B) Syntax error.
+C) Class definition error.
+D) No Error.
+Answer: A
+138. [HTML/CSS] How do you provide a fallback value for a CSS custom property (variable)?
+A) var(--my-color || blue)
+B) var(--my-color, blue)
+C) fallback(--my-color: blue)
+D) --my-color: default(blue)
+Answer: B
+139. [Java] Check the Map key mutability: StringBuilder sb = new StringBuilder("A"); map.put(sb, 1); sb.append("B");
+A) map.get(sb) returns null (Hash code of key changed)
+B) Returns 1
+C) StringBuilder cannot be key
+D) No Error
+Answer: A
+140. [DBMS] How do you fetch the next value from an Oracle sequence named emp_seq?
+A) emp_seq.NEXT() | B) emp_seq.NEXTVAL | C) NEXT(emp_seq) | D) emp_seq.INCREMENT
+Answer: B
+141. [C] Check the shift operator behavior: x << 32 on 32-bit int.
+A) Undefined Behavior (Shifting by width of type or more is UB)
+B) Prints 0
+C) Prints 1
+D) No Error
+Answer: A
+142. [Python] Identify the Thread Race Condition: counter += 1 in two threads.
+A) Prints less than the maximum iterations (Race Condition).
+B) Global keyword not needed.
+C) Counter syntax error.
+D) Always prints correct max.
+Answer: A
+143. [HTML/CSS] What is the difference between :nth-child(2) and :nth-of-type(2)?
+A) :nth-child(2) selects by absolute sibling position; :nth-of-type(2) selects by sibling position of the same tag.
+B) :nth-of-type(2) is deprecated.
+C) :nth-child(2) counts from bottom.
+D) They do exactly the same thing.
+Answer: A
+144. [Java] Identify the Exception swallowing: throw new RuntimeException("Finally"); in finally block.
+A) The original exception from try/catch is lost (Suppressed)
+B) Unreachable code
+C) Finally cannot throw exception
+D) No Error
+Answer: A
+145. [DBMS] What is the difference between CHAR and VARCHAR2 in Oracle?
+A) CHAR stores numbers.
+B) VARCHAR2 is fixed-length.
+C) CHAR is fixed-length (pads with spaces); VARCHAR2 is variable-length.
+D) No difference.
+Answer: C
+146. [C] Identify the function pointer syntax error: void *p = func; p();
+A) Cannot cast function to void pointer
+B) Cannot call a function via a void pointer (Must cast back to function pointer)
+C) Void function cannot return
+D) No Error
+Answer: B
+147. [Python] Check the Decorator Argument Loss: Wrapper takes 0 args, wrapped func takes 1.
+A) TypeError: wrapper() takes 0 positional arguments but 1 was given.
+B) Decorator syntax error.
+C) Call error.
+D) No Error.
+Answer: A
+148. [HTML/CSS] When centering with position: absolute; top: 50%;, what pairs with it?
+A) margin-top: -50%;
+B) translate: center;
+C) transform: translateY(-50%);
+D) align-items: center;
+Answer: C
+149. [Java] Check the WeakReference behavior: WeakReference weak = new WeakReference(o); o = null; System.gc();
+A) weak.get() returns null (Object was GC'd)
+B) Prints Object reference
+C) Generic type error
+D) No Error
+Answer: A
+150. [DBMS] What is a Synonym in Oracle?
+A) An alternative name (alias) for an object such as a table, view, or sequence.
+B) A duplicated table.
+C) A keyword that means the same thing.
+D) An index type.
+Answer: A
