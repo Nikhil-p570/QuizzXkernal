@@ -1,32 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { questions } from './data/questions';
 import QuestionCard from './components/QuestionCard';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Filter } from 'lucide-react';
 
 function App() {
+    const categories = useMemo(() => [...new Set(questions.map(q => q.category))], []);
+    const [selectedCategories, setSelectedCategories] = useState(categories);
     const [activeQuestions, setActiveQuestions] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [isComplete, setIsComplete] = useState(false);
 
-    const getFiveRandom = () => {
-        const shuffled = [...questions].sort(() => 0.5 - Math.random());
-        setActiveQuestions(shuffled.slice(0, 5));
-        setScore(0);
-        setCurrentIndex(0);
-        setIsComplete(false);
+    const toggleCategory = (cat) => {
+        setSelectedCategories(prev =>
+            prev.includes(cat)
+                ? prev.filter(c => c !== cat)
+                : [...prev, cat]
+        );
     };
 
     const handleCorrect = () => {
         setScore(prev => prev + 1);
     };
 
-    const handleNext = () => {
-        if (currentIndex < activeQuestions.length - 1) {
-            setCurrentIndex(prev => prev + 1);
-        } else {
-            setIsComplete(true);
-        }
+    const getFiveRandom = () => {
+        const pool = questions.filter(q => selectedCategories.includes(q.category));
+        if (pool.length === 0) return;
+
+        const shuffled = [...pool].sort(() => 0.5 - Math.random());
+        setActiveQuestions(shuffled.slice(0, Math.min(5, pool.length)));
+        setScore(0);
+        setCurrentIndex(0);
+        setIsComplete(false);
     };
 
     return (
@@ -36,11 +42,40 @@ function App() {
                 <p>Test your coding knowledge across C, Python, Java, and DBMS</p>
             </header>
 
-            {!activeQuestions.length && (
-                <section>
-                    <button className="btn-primary" onClick={getFiveRandom}>
-                        Give me 5 questions
+            {!activeQuestions.length && !isComplete && (
+                <section className="setup-section">
+                    <div className="category-filter">
+                        <div className="filter-header">
+                            <Filter size={18} />
+                            <span>Select Categories</span>
+                        </div>
+                        <div className="category-chips">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    className={`chip ${selectedCategories.includes(cat) ? 'active' : ''}`}
+                                    onClick={() => toggleCategory(cat)}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="filter-actions">
+                            <button className="text-btn" onClick={() => setSelectedCategories(categories)}>Select All</button>
+                            <button className="text-btn" onClick={() => setSelectedCategories([])}>Clear All</button>
+                        </div>
+                    </div>
+
+                    <button
+                        className="btn-primary"
+                        onClick={getFiveRandom}
+                        disabled={selectedCategories.length === 0}
+                    >
+                        Start Quiz (5 Questions)
                     </button>
+                    {selectedCategories.length === 0 && (
+                        <p className="warning-text">Please select at least one category to start.</p>
+                    )}
                 </section>
             )}
 
@@ -64,7 +99,7 @@ function App() {
                     <div className="questions-container">
                         <AnimatePresence mode="wait">
                             <motion.div
-                                key={activeQuestions[currentIndex].id}
+                                key={`${activeQuestions[currentIndex].id}-${currentIndex}`}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
@@ -73,7 +108,13 @@ function App() {
                                 <QuestionCard
                                     data={activeQuestions[currentIndex]}
                                     onCorrect={handleCorrect}
-                                    onNext={handleNext}
+                                    onNext={() => {
+                                        if (currentIndex < activeQuestions.length - 1) {
+                                            setCurrentIndex(prev => prev + 1);
+                                        } else {
+                                            setIsComplete(true);
+                                        }
+                                    }}
                                     isLast={currentIndex === activeQuestions.length - 1}
                                 />
                             </motion.div>
@@ -99,15 +140,18 @@ function App() {
                             <strong>{Math.round((score / activeQuestions.length) * 100)}%</strong>
                         </div>
                     </div>
-                    <button className="btn-primary" onClick={getFiveRandom}>
+                    <button className="btn-primary" onClick={() => {
+                        setActiveQuestions([]);
+                        setIsComplete(false);
+                    }}>
                         Try Another Set
                     </button>
                 </motion.div>
             )}
 
-            {activeQuestions.length === 0 && (
-                <div style={{ textAlign: 'center', marginTop: '4rem', color: '#94a3b8' }}>
-                    <p>Ready to start? Click the button above to get your first set of questions!</p>
+            {activeQuestions.length === 0 && !isComplete && (
+                <div style={{ textAlign: 'center', marginTop: '2rem', color: '#94a3b8' }}>
+                    <p>Configure your categories and click Start!</p>
                 </div>
             )}
         </div>
