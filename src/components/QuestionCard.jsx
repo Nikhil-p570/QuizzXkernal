@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle2, XCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 
-const QuestionCard = ({ data, onCorrect, onNext, isLast }) => {
-    const [selected, setSelected] = useState(null);
-    const [validated, setValidated] = useState(false);
+const QuestionCard = ({ data, savedState, onUpdate, onNext, onPrev, isFirst, isLast }) => {
+    const [selected, setSelected] = useState(savedState?.selected || null);
+    const [validated, setValidated] = useState(savedState?.validated || false);
 
-    // Reset local state when data changes (for sequential flow)
+    // Sync local state when moving between questions
     useEffect(() => {
-        setSelected(null);
-        setValidated(false);
-    }, [data]);
+        setSelected(savedState?.selected || null);
+        setValidated(savedState?.validated || false);
+    }, [savedState]);
+
+    const handleSelect = (label) => {
+        if (validated) return;
+        setSelected(label);
+        onUpdate({ selected: label, validated: false });
+    };
 
     const handleValidate = () => {
         if (selected === null) return;
         setValidated(true);
-        if (selected === data.answer) {
-            onCorrect();
-        }
+        onUpdate({ selected, validated: true });
     };
 
     const getOptionClass = (optionLabel) => {
@@ -51,7 +55,7 @@ const QuestionCard = ({ data, onCorrect, onNext, isLast }) => {
                         <button
                             key={label}
                             className={getOptionClass(label)}
-                            onClick={() => !validated && setSelected(label)}
+                            onClick={() => handleSelect(label)}
                             disabled={validated}
                         >
                             <span className="option-label">{label}</span>
@@ -62,28 +66,36 @@ const QuestionCard = ({ data, onCorrect, onNext, isLast }) => {
             </div>
 
             <div className="card-footer">
-                {!validated ? (
-                    <button
-                        className="btn-result"
-                        onClick={handleValidate}
-                        disabled={selected === null}
-                    >
-                        Check Result
-                    </button>
-                ) : (
-                    <div className="footer-validated">
-                        <div className={`validation-msg ${selected === data.answer ? 'text-correct' : 'text-incorrect'}`}>
-                            {selected === data.answer ? (
-                                <><CheckCircle2 size={20} /> Correct!</>
-                            ) : (
-                                <><XCircle size={20} /> Incorrect</>
-                            )}
-                        </div>
-                        <button className="btn-next" onClick={onNext}>
-                            {isLast ? 'Finish Quiz' : 'Next Question'} <ArrowRight size={18} />
+                <div className="nav-buttons">
+                    {!isFirst && (
+                        <button className="btn-secondary" onClick={onPrev}>
+                            <ArrowLeft size={18} /> Previous
                         </button>
-                    </div>
-                )}
+                    )}
+
+                    {!validated ? (
+                        <button
+                            className="btn-result"
+                            onClick={handleValidate}
+                            disabled={selected === null}
+                        >
+                            Check Result
+                        </button>
+                    ) : (
+                        <div className="footer-validated">
+                            <div className={`validation-msg ${selected === data.answer ? 'text-correct' : 'text-incorrect'}`}>
+                                {selected === data.answer ? (
+                                    <><CheckCircle2 size={20} /> Correct!</>
+                                ) : (
+                                    <><XCircle size={20} /> Incorrect</>
+                                )}
+                            </div>
+                            <button className="btn-next" onClick={onNext}>
+                                {isLast ? 'Finish Quiz' : 'Next Question'} <ArrowRight size={18} />
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

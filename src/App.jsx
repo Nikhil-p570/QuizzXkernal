@@ -11,6 +11,8 @@ function App() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [isComplete, setIsComplete] = useState(false);
+    const [selectedDifficulty, setSelectedDifficulty] = useState('Easy');
+    const [userAnswers, setUserAnswers] = useState([]); // [{selected: null, validated: false}]
 
     const toggleCategory = (cat) => {
         setSelectedCategories(prev =>
@@ -20,19 +22,45 @@ function App() {
         );
     };
 
-    const handleCorrect = () => {
-        setScore(prev => prev + 1);
-    };
-
     const getFiveRandom = () => {
-        const pool = questions.filter(q => selectedCategories.includes(q.category));
+        const pool = questions.filter(q =>
+            selectedCategories.includes(q.category) &&
+            q.difficulty === selectedDifficulty
+        );
         if (pool.length === 0) return;
 
         const shuffled = [...pool].sort(() => 0.5 - Math.random());
-        setActiveQuestions(shuffled.slice(0, Math.min(5, pool.length)));
+        const selectedQuestions = shuffled.slice(0, Math.min(5, pool.length));
+
+        setActiveQuestions(selectedQuestions);
+        setUserAnswers(new Array(selectedQuestions.length).fill(null).map(() => ({
+            selected: null,
+            validated: false
+        })));
         setScore(0);
         setCurrentIndex(0);
         setIsComplete(false);
+    };
+
+    const handleAnswerUpdate = (index, newState) => {
+        const newAnswers = [...userAnswers];
+        newAnswers[index] = newState;
+        setUserAnswers(newAnswers);
+
+        // Update score dynamically based on validated correct answers
+        const currentScore = newAnswers.reduce((acc, curr, i) => {
+            if (curr.validated && curr.selected === activeQuestions[i].answer) {
+                return acc + 1;
+            }
+            return acc;
+        }, 0);
+        setScore(currentScore);
+    };
+
+    const handlePrev = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+        }
     };
 
     return (
@@ -63,6 +91,24 @@ function App() {
                         <div className="filter-actions">
                             <button className="text-btn" onClick={() => setSelectedCategories(categories)}>Select All</button>
                             <button className="text-btn" onClick={() => setSelectedCategories([])}>Clear All</button>
+                        </div>
+                    </div>
+
+                    <div className="difficulty-selector" style={{ marginBottom: '2rem' }}>
+                        <div className="filter-header">
+                            <Filter size={18} />
+                            <span>Select Difficulty</span>
+                        </div>
+                        <div className="category-chips">
+                            {['Easy', 'Medium', 'Hard'].map(level => (
+                                <button
+                                    key={level}
+                                    className={`chip ${selectedDifficulty === level ? 'active' : ''}`}
+                                    onClick={() => setSelectedDifficulty(level)}
+                                >
+                                    {level}
+                                </button>
+                            ))}
                         </div>
                     </div>
 
@@ -99,7 +145,7 @@ function App() {
                     <div className="questions-container">
                         <AnimatePresence mode="wait">
                             <motion.div
-                                key={`${activeQuestions[currentIndex].id}-${currentIndex}`}
+                                key={currentIndex}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
@@ -107,7 +153,8 @@ function App() {
                             >
                                 <QuestionCard
                                     data={activeQuestions[currentIndex]}
-                                    onCorrect={handleCorrect}
+                                    savedState={userAnswers[currentIndex]}
+                                    onUpdate={(newState) => handleAnswerUpdate(currentIndex, newState)}
                                     onNext={() => {
                                         if (currentIndex < activeQuestions.length - 1) {
                                             setCurrentIndex(prev => prev + 1);
@@ -115,6 +162,8 @@ function App() {
                                             setIsComplete(true);
                                         }
                                     }}
+                                    onPrev={handlePrev}
+                                    isFirst={currentIndex === 0}
                                     isLast={currentIndex === activeQuestions.length - 1}
                                 />
                             </motion.div>
